@@ -47,3 +47,18 @@ npm i express
 ```
 npm i pug
 ```
+## Frontend Setup
+### view 설정 by express
+```javascript
+// server.js
+app.set('view engin', "pug");
+app.set('views', __dirname + "/src/views");
+
+const handleListen = () => console.log(`Listening on http://localhost:3000`)
+
+app.listen(3000, handleListen);
+```
+### 라우터 설정
+```js
+app.get("/", (req, res) => res.render("home"));
+```
