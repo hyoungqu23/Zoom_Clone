@@ -3,8 +3,9 @@ import express from "express";
 const app = express();
 
 app.set('view engin', "pug");
+// app.engine('html', require('pug').renderFile);
 app.set('views', __dirname + "/views");
-
+app.use("/public", express.static(__dirname + "/public"));
 app.get("/", (req, res) => res.render("home"));
 const handleListen = () => console.log(`Listening on http://localhost:3000`)
 

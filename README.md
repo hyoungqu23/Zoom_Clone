@@ -62,3 +62,5 @@ app.listen(3000, handleListen);
 ```js
 app.get("/", (req, res) => res.render("home"));
 ```
+
+### `No default engine was specified and no extension was provided.` 에러
